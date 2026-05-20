@@ -507,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message: messageField.value.trim()
     };
 
-    fetch('https://formsubmit.co/ajax/ainaasaffiya1703@gmail.com', {
+    fetch('https://formsubmit.co/ajax/ainasaffiya1703@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

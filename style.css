@@ -181,7 +181,7 @@ img {
   transform: translateY(-5px);
   background: var(--card-hover-bg);
   border-color: var(--card-hover-border);
-  box-shadow: var(--shadow-md), 0 10px 30px rgba(14, 229, 163, 0.05);
+  box-shadow: var(--shadow-md), 0 10px 30px rgba(217, 70, 239, 0.05);
 }
 
 /* ==========================================================================
@@ -207,7 +207,7 @@ img {
   background: var(--gradient-accent);
   color: #fff;
   border: none;
-  box-shadow: 0 4px 15px rgba(14, 229, 163, 0.3);
+  box-shadow: 0 4px 15px rgba(217, 70, 239, 0.3);
 }
 
 .btn-primary::before {
@@ -225,7 +225,7 @@ img {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
 }
 
 .btn-primary:hover::before {
@@ -241,7 +241,7 @@ img {
 .btn-outline:hover {
   border-color: var(--primary-accent);
   color: var(--primary-accent);
-  box-shadow: 0 0 15px rgba(14, 229, 163, 0.15);
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.15);
   transform: translateY(-2px);
 }
 
@@ -295,7 +295,7 @@ header {
 
 header.scrolled #navbar {
   padding: 0.8rem 0;
-  background-color: rgba(6, 6, 12, 0.85);
+  background-color: rgba(10, 5, 27, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--card-border);
@@ -320,10 +320,10 @@ header.scrolled #navbar {
 .logo-icon {
   font-size: 1.2rem;
   color: var(--primary-accent);
-  background: rgba(14, 229, 163, 0.1);
+  background: rgba(217, 70, 239, 0.1);
   padding: 0.4rem;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(14, 229, 163, 0.2);
+  border: 1px solid rgba(217, 70, 239, 0.2);
 }
 
 .logo-text {
@@ -373,8 +373,8 @@ header.scrolled #navbar {
 }
 
 .btn-contact {
-  background: rgba(99, 102, 241, 0.15);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
   padding: 0.5rem 1.2rem;
   border-radius: var(--radius-full);
 }
@@ -383,7 +383,7 @@ header.scrolled #navbar {
   background: var(--gradient-accent);
   color: #fff;
   border-color: transparent;
-  box-shadow: 0 5px 15px rgba(14, 229, 163, 0.2);
+  box-shadow: 0 5px 15px rgba(217, 70, 239, 0.25);
 }
 
 .btn-contact::after {
@@ -523,9 +523,9 @@ header.scrolled #navbar {
 .social-icon:hover {
   color: var(--primary-accent);
   border-color: var(--primary-accent);
-  background: rgba(14, 229, 163, 0.05);
+  background: rgba(217, 70, 239, 0.05);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(14, 229, 163, 0.1);
+  box-shadow: 0 5px 15px rgba(217, 70, 239, 0.1);
 }
 
 /* Hero Visual / Profile Image */
@@ -709,7 +709,7 @@ header.scrolled #navbar {
 
 .stat-card:hover {
   border-color: var(--secondary-accent);
-  background: rgba(99, 102, 241, 0.03);
+  background: rgba(168, 85, 247, 0.03);
 }
 
 .stat-number {
@@ -782,7 +782,7 @@ header.scrolled #navbar {
 }
 
 .skill-tag:hover {
-  background: rgba(14, 229, 163, 0.08);
+  background: rgba(217, 70, 239, 0.08);
   border-color: var(--primary-accent);
   color: var(--primary-accent);
   transform: translateY(-2px);
@@ -840,7 +840,7 @@ header.scrolled #navbar {
   align-items: center;
   justify-content: center;
   z-index: 10;
-  box-shadow: 0 0 15px rgba(14, 229, 163, 0.2);
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.2);
   color: var(--primary-accent);
   transition: all var(--transition-normal);
 }
@@ -925,13 +925,13 @@ header.scrolled #navbar {
 }
 
 .exp-tag {
-  background: rgba(99, 102, 241, 0.1);
-  color: #818cf8;
+  background: rgba(168, 85, 247, 0.1);
+  color: #c084fc;
   font-size: 0.8rem;
   font-family: var(--font-mono);
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.15);
 }
 
 /* Arrow indicators for cards */
@@ -977,10 +977,10 @@ header.scrolled #navbar {
 .achievement-icon {
   width: 50px;
   height: 50px;
-  background: rgba(14, 229, 163, 0.1);
+  background: rgba(217, 70, 239, 0.1);
   color: var(--primary-accent);
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(14, 229, 163, 0.2);
+  border: 1px solid rgba(217, 70, 239, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -992,7 +992,7 @@ header.scrolled #navbar {
 .achievement-card:hover .achievement-icon {
   background: var(--primary-accent);
   color: var(--bg-color);
-  box-shadow: 0 0 15px rgba(14, 229, 163, 0.3);
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.3);
 }
 
 .achievement-title {
@@ -1049,7 +1049,7 @@ header.scrolled #navbar {
   background: var(--gradient-accent);
   color: #fff;
   border-color: transparent;
-  box-shadow: 0 5px 15px rgba(14, 229, 163, 0.2);
+  box-shadow: 0 5px 15px rgba(217, 70, 239, 0.25);
 }
 
 .gallery-grid {
@@ -1089,7 +1089,7 @@ header.scrolled #navbar {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(6, 6, 12, 0.2) 0%, rgba(6, 6, 12, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(10, 5, 27, 0.2) 0%, rgba(10, 5, 27, 0.92) 100%);
   opacity: 0;
   transition: opacity var(--transition-normal);
   display: flex;
@@ -1141,20 +1141,20 @@ header.scrolled #navbar {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(14, 229, 163, 0.2);
+  box-shadow: 0 4px 10px rgba(217, 70, 239, 0.25);
   transition: all var(--transition-normal);
 }
 
 .gallery-zoom-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.45);
 }
 
 /* Hover effects */
 .gallery-item:hover {
   transform: translateY(-5px);
   border-color: var(--card-hover-border);
-  box-shadow: var(--shadow-md), 0 10px 30px rgba(14, 229, 163, 0.05);
+  box-shadow: var(--shadow-md), 0 10px 30px rgba(217, 70, 239, 0.05);
 }
 
 .gallery-item:hover img {
@@ -1321,8 +1321,8 @@ header.scrolled #navbar {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-sm);
-  background: rgba(99, 102, 241, 0.15);
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.25);
   color: var(--secondary-accent);
   font-size: 1.25rem;
   display: flex;
@@ -1334,7 +1334,7 @@ header.scrolled #navbar {
 .info-item:hover .info-icon {
   background: var(--secondary-accent);
   color: #fff;
-  box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
 }
 
 .info-text {
@@ -1363,7 +1363,7 @@ header.scrolled #navbar {
 .contact-map-placeholder {
   height: 180px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, rgba(6, 6, 12, 0.6) 0%, rgba(99, 102, 241, 0.05) 100%),
+  background: linear-gradient(135deg, rgba(10, 5, 27, 0.6) 0%, rgba(168, 85, 247, 0.05) 100%),
               url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%2312121d" width="100" height="100"/><path d="M0,50 Q25,25 50,50 T100,50" fill="none" stroke="%23ffffff" stroke-width="0.2" stroke-opacity="0.1"/><path d="M0,20 Q30,40 60,20 T100,20" fill="none" stroke="%23ffffff" stroke-width="0.2" stroke-opacity="0.1"/></svg>');
   border: 1px solid var(--card-border);
   display: flex;
@@ -1448,7 +1448,7 @@ header.scrolled #navbar {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: rgba(14, 229, 163, 0.2);
+  border-color: rgba(217, 70, 239, 0.3);
   background: rgba(255, 255, 255, 0.04);
 }
 
@@ -1496,7 +1496,7 @@ header.scrolled #navbar {
    FOOTER
    ========================================================================== */
 footer {
-  background-color: #030307;
+  background-color: #060312;
   padding: 4.5rem 0 2rem 0;
   border-top: 1px solid var(--card-border);
   position: relative;
@@ -1551,7 +1551,7 @@ footer {
 .footer-socials a:hover {
   color: var(--primary-accent);
   border-color: var(--primary-accent);
-  background: rgba(14, 229, 163, 0.05);
+  background: rgba(217, 70, 239, 0.05);
   transform: translateY(-2px);
 }
 
@@ -1797,7 +1797,7 @@ footer {
     right: -100%;
     width: 280px;
     height: 100vh;
-    background-color: rgba(6, 6, 12, 0.98);
+    background-color: rgba(10, 5, 27, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-left: 1px solid var(--card-border);

@@ -493,59 +493,44 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Real-time contact form integration via Web3Forms
-    // Sign up for a free Access Key at: https://web3forms.com/
-    const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"; 
-
+    // Real-time contact form integration via FormSubmit.co (No API keys needed!)
     btnSubmit.disabled = true;
     const btnText = btnSubmit.querySelector('span');
     const originalText = btnText.textContent;
     btnText.textContent = 'Sending Message...';
     btnSubmit.querySelector('i').className = 'fa-solid fa-spinner fa-spin';
 
-    if (WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY !== "YOUR_ACCESS_KEY_HERE") {
-      const formData = {
-        access_key: WEB3FORMS_ACCESS_KEY,
-        name: nameField.value.trim(),
-        email: emailField.value.trim(),
-        subject: subjectField.value.trim(),
-        message: messageField.value.trim()
-      };
+    const formData = {
+      name: nameField.value.trim(),
+      email: emailField.value.trim(),
+      _subject: subjectField.value.trim() || 'New Portfolio Message',
+      message: messageField.value.trim()
+    };
 
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-      .then(async (response) => {
-        let json = await response.json();
-        if (response.status === 200) {
-          showToast('Message Sent', 'Thank you! Your message has been delivered to my inbox.');
-          contactForm.reset();
-        } else {
-          showToast('Delivery Failed', json.message || 'Something went wrong.', true);
-        }
-      })
-      .catch(() => {
-        showToast('Connection Error', 'Failed to reach the mail server. Please try again.', true);
-      })
-      .finally(() => {
-        btnSubmit.disabled = false;
-        btnText.textContent = originalText;
-        btnSubmit.querySelector('i').className = 'fa-solid fa-paper-plane';
-      });
-    } else {
-      // Demo Mode Fallback
-      setTimeout(() => {
-        btnSubmit.disabled = false;
-        btnText.textContent = originalText;
-        btnSubmit.querySelector('i').className = 'fa-solid fa-paper-plane';
-        showToast('Message Sent (Demo)', 'Setup your Web3Forms Access Key in script.js to receive emails.');
+    fetch('https://formsubmit.co/ajax/ainaasaffiya1703@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success === "true" || data.success === true) {
+        showToast('Message Sent', 'Thank you! Your message has been sent successfully.');
         contactForm.reset();
-      }, 1500);
-    }
+      } else {
+        showToast('Delivery Failed', data.message || 'Something went wrong.', true);
+      }
+    })
+    .catch(() => {
+      showToast('Connection Error', 'Failed to reach the mail server. Please try again.', true);
+    })
+    .finally(() => {
+      btnSubmit.disabled = false;
+      btnText.textContent = originalText;
+      btnSubmit.querySelector('i').className = 'fa-solid fa-paper-plane';
+    });
   });
 });

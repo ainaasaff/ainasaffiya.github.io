@@ -2,19 +2,19 @@
    DESIGN TOKENS & VARIABLES
    ========================================================================== */
 :root {
-  --bg-color: #120911;            /* Deep Rose Dark */
-  --bg-alternate: #1a0f19;        /* Velvet Rose Dark */
-  --card-bg: rgba(28, 16, 27, 0.55);
+  --bg-color: #0a051b;            /* Deep Midnight Purple */
+  --bg-alternate: #110a2c;        /* Velvet Dark Indigo */
+  --card-bg: rgba(18, 10, 44, 0.55);
   --card-border: rgba(255, 255, 255, 0.04);
   --card-hover-bg: rgba(255, 255, 255, 0.06);
-  --card-hover-border: rgba(251, 113, 133, 0.25);
+  --card-hover-border: rgba(217, 70, 239, 0.25);
   
-  --primary-accent: #fb7185;       /* Rose Pink */
-  --secondary-accent: #f472b6;     /* Blush Pink */
-  --tertiary-accent: #fda4af;      /* Rose Gold Accent */
+  --primary-accent: #d946ef;       /* Neon Orchid Pink */
+  --secondary-accent: #a855f7;     /* Electric Purple */
+  --tertiary-accent: #ec4899;      /* Deep Pink Highlight */
   
-  --primary-glow: rgba(251, 113, 133, 0.15);
-  --secondary-glow: rgba(244, 114, 182, 0.18);
+  --primary-glow: rgba(217, 70, 239, 0.15);
+  --secondary-glow: rgba(168, 85, 247, 0.18);
   
   --text-primary: #f8fafc;        /* Off-white */
   --text-secondary: #cbd5e1;      /* Slate-300 */
@@ -26,8 +26,8 @@
   
   /* Gradients */
   --gradient-accent: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
-  --gradient-glow: linear-gradient(135deg, rgba(251, 113, 133, 0.5), rgba(244, 114, 182, 0.5));
-  --gradient-dark: linear-gradient(180deg, rgba(18, 9, 17, 0.8) 0%, rgba(18, 9, 17, 0.98) 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(217, 70, 239, 0.5), rgba(168, 85, 247, 0.5));
+  --gradient-dark: linear-gradient(180deg, rgba(10, 5, 27, 0.8) 0%, rgba(10, 5, 27, 0.98) 100%);
   
   /* Typography */
   --font-sans: 'Outfit', sans-serif;

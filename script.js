@@ -75,9 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   const typedTextSpan = document.getElementById('typed-text');
   const roles = [
-    'Web Development',
+    'Java & Spring Boot',
     'Responsive Web Design',
-    'Cross-Platform Apps',
+    'Cross-Platform Development',
     'Full Stack Systems'
   ];
   const typingSpeed = 100;
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     draw() {
-      ctx.fillStyle = 'rgba(14, 229, 163, 0.4)';
+      ctx.fillStyle = 'rgba(192, 132, 252, 0.4)'; // Soft Lavender Amethyst
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (distance < 110) {
           opacityValue = 1 - (distance / 110);
-          ctx.strokeStyle = `rgba(99, 102, 241, ${opacityValue * 0.15})`; // Secondary Accent Indigo lines
+          ctx.strokeStyle = `rgba(251, 113, 133, ${opacityValue * 0.15})`; // Secondary Accent Rose Gold lines
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -493,22 +493,59 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Mock API Submission (Simulate Server Request)
+    // Real-time contact form integration via Web3Forms
+    // Sign up for a free Access Key at: https://web3forms.com/
+    const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"; 
+
     btnSubmit.disabled = true;
     const btnText = btnSubmit.querySelector('span');
     const originalText = btnText.textContent;
     btnText.textContent = 'Sending Message...';
     btnSubmit.querySelector('i').className = 'fa-solid fa-spinner fa-spin';
 
-    setTimeout(() => {
-      // Revert Button State
-      btnSubmit.disabled = false;
-      btnText.textContent = originalText;
-      btnSubmit.querySelector('i').className = 'fa-solid fa-paper-plane';
+    if (WEB3FORMS_ACCESS_KEY && WEB3FORMS_ACCESS_KEY !== "YOUR_ACCESS_KEY_HERE") {
+      const formData = {
+        access_key: WEB3FORMS_ACCESS_KEY,
+        name: nameField.value.trim(),
+        email: emailField.value.trim(),
+        subject: subjectField.value.trim(),
+        message: messageField.value.trim()
+      };
 
-      // Show toast and reset form
-      showToast('Message Sent', 'Thank you! Your message has been received.');
-      contactForm.reset();
-    }, 2000);
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status === 200) {
+          showToast('Message Sent', 'Thank you! Your message has been delivered to my inbox.');
+          contactForm.reset();
+        } else {
+          showToast('Delivery Failed', json.message || 'Something went wrong.', true);
+        }
+      })
+      .catch(() => {
+        showToast('Connection Error', 'Failed to reach the mail server. Please try again.', true);
+      })
+      .finally(() => {
+        btnSubmit.disabled = false;
+        btnText.textContent = originalText;
+        btnSubmit.querySelector('i').className = 'fa-solid fa-paper-plane';
+      });
+    } else {
+      // Demo Mode Fallback
+      setTimeout(() => {
+        btnSubmit.disabled = false;
+        btnText.textContent = originalText;
+        btnSubmit.querySelector('i').className = 'fa-solid fa-paper-plane';
+        showToast('Message Sent (Demo)', 'Setup your Web3Forms Access Key in script.js to receive emails.');
+        contactForm.reset();
+      }, 1500);
+    }
   });
 });

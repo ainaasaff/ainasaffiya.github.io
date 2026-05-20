@@ -2,20 +2,19 @@
    DESIGN TOKENS & VARIABLES
    ========================================================================== */
 :root {
-  /* Color Palette */
-  --bg-color: #06060c;
-  --bg-alternate: #0c0d16;
-  --card-bg: rgba(18, 18, 29, 0.4);
-  --card-border: rgba(255, 255, 255, 0.05);
-  --card-hover-bg: rgba(255, 255, 255, 0.05);
-  --card-hover-border: rgba(14, 229, 163, 0.25);
+  --bg-color: #090510;            /* Midnight Amethyst */
+  --bg-alternate: #0f0b18;        /* Rich Plum */
+  --card-bg: rgba(20, 14, 30, 0.5);
+  --card-border: rgba(255, 255, 255, 0.04);
+  --card-hover-bg: rgba(255, 255, 255, 0.06);
+  --card-hover-border: rgba(192, 132, 252, 0.25);
   
-  --primary-accent: #0ee5a3;       /* Neon Mint */
-  --secondary-accent: #6366f1;     /* Electric Indigo */
-  --tertiary-accent: #a855f7;      /* Royal Purple */
+  --primary-accent: #c084fc;       /* Soft Lavender Amethyst */
+  --secondary-accent: #fb7185;     /* Soft Rose Gold / Peach */
+  --tertiary-accent: #f472b6;      /* Pink Blush */
   
-  --primary-glow: rgba(14, 229, 163, 0.15);
-  --secondary-glow: rgba(99, 102, 241, 0.2);
+  --primary-glow: rgba(192, 132, 252, 0.15);
+  --secondary-glow: rgba(251, 113, 133, 0.18);
   
   --text-primary: #f8fafc;        /* Off-white */
   --text-secondary: #cbd5e1;      /* Slate-300 */
@@ -27,8 +26,8 @@
   
   /* Gradients */
   --gradient-accent: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
-  --gradient-glow: linear-gradient(135deg, rgba(14, 229, 163, 0.5), rgba(99, 102, 241, 0.5));
-  --gradient-dark: linear-gradient(180deg, rgba(6, 6, 12, 0.8) 0%, rgba(6, 6, 12, 0.98) 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(192, 132, 252, 0.5), rgba(251, 113, 133, 0.5));
+  --gradient-dark: linear-gradient(180deg, rgba(9, 5, 16, 0.8) 0%, rgba(9, 5, 16, 0.98) 100%);
   
   /* Typography */
   --font-sans: 'Outfit', sans-serif;

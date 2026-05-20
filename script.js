@@ -515,22 +515,27 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       body: JSON.stringify(formData)
     })
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('AJAX request failed');
+      }
+      return response.json();
+    })
     .then(data => {
       if (data.success === "true" || data.success === true) {
         showToast('Message Sent', 'Thank you! Your message has been sent successfully.');
         contactForm.reset();
+        btnSubmit.disabled = false;
+        btnText.textContent = originalText;
+        btnSubmit.querySelector('i').className = 'fa-solid fa-paper-plane';
       } else {
-        showToast('Delivery Failed', data.message || 'Something went wrong.', true);
+        // Fallback to native form submission
+        contactForm.submit();
       }
     })
     .catch(() => {
-      showToast('Connection Error', 'Failed to reach the mail server. Please try again.', true);
-    })
-    .finally(() => {
-      btnSubmit.disabled = false;
-      btnText.textContent = originalText;
-      btnSubmit.querySelector('i').className = 'fa-solid fa-paper-plane';
+      // Fallback to native form submission (e.g. if blocked by AdBlock or Brave Shields)
+      contactForm.submit();
     });
   });
 });

@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     draw() {
-      ctx.fillStyle = 'rgba(217, 70, 239, 0.45)'; // Soft Neon Orchid / Magenta Pink
+      ctx.fillStyle = 'rgba(244, 63, 94, 0.45)'; // Soft Rose Pink
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (distance < 110) {
           opacityValue = 1 - (distance / 110);
-          ctx.strokeStyle = `rgba(168, 85, 247, ${opacityValue * 0.18})`; // Electric Purple lines
+          ctx.strokeStyle = `rgba(236, 72, 153, ${opacityValue * 0.18})`; // Pink lines
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(particlesArray[a].x, particlesArray[a].y);

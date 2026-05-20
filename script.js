@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   const typedTextSpan = document.getElementById('typed-text');
   const roles = [
-    'Java & Spring Boot',
+    'C# & .NET Development',
     'Responsive Web Design',
     'Cross-Platform Development',
     'Full Stack Systems'
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     draw() {
-      ctx.fillStyle = 'rgba(192, 132, 252, 0.4)'; // Soft Lavender Amethyst
+      ctx.fillStyle = 'rgba(251, 113, 133, 0.4)'; // Soft Rose Pink
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
